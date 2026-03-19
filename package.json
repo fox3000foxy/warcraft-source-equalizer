@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc src/index.ts",
+    "start": "node src/index.js",
+    "dev": "npx ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +16,17 @@
   "devDependencies": {
     "@types/node": "^25.5.0",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "knex": "^3.1.0",
+    "sqlite3": "^6.0.1"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "sqlite3"
+    ],
+    "onlyBuiltDependencies": [
+      "sqlite3"
+    ]
   }
 }
